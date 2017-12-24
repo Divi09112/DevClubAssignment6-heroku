@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<div class="main">    
+  <div class="heading">
+    <span>Your ToDos</span><br /><br /><form action="" method="POST">
+    {% csrf_token %}
+    <table>
+      {{ form }}
+    </table>
+    <input type="submit">
+  </div>
+</div>
+
+{% endblock %}

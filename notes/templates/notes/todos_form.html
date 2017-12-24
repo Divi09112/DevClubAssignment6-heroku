@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ToDo</title>
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static "notes/notes.css"%}"
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <ul>
+      {% for task in tasks %}
+        <li>{{ task.title }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+<div class="main">    <div class="heading">
+      <span>Your ToDos</span><br /><br /><form action="" method="post">{% csrf_token %}
+      {{ form }}
+      <input type="submit">
+    </div>
+    <div class="list">
+      <ul id="list">
+      </ul>
+    </div></div>
+    <script src="{% static "/notes/notes.js" %}"></script>
+  </body>
+</html>
+

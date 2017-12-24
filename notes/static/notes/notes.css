@@ -1,0 +1,53 @@
+.sidebar{
+  width: 240px;
+  height: 100%;
+  background-color:#ffc100;
+  position: fixed;
+  height:100%;
+  z-index:1;
+  top:0;
+  left:0;
+}
+
+span{
+margin-left:15px;
+margin-bottom:15px;
+font-size:25px;
+}
+
+hr{
+margin:0px;
+height:2px;
+background-color:#ff9900;
+border:0px;
+width:248px;
+position:relative;
+left:-8px;
+}
+
+.list{
+line-height:30px;
+padding-left:20px;
+}
+
+.list:hover{
+background-color:#ff9900;
+}
+
+.show{
+color:white;
+}
+
+.main{
+  margin-left:270px;
+}
+
+body{
+background-color:#f8f8f8;
+margin:0px;
+font-family:Verdana;
+}
+
+a{
+text-decoration:none;
+}

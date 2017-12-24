@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NoteKeeper-Signup</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'notes/signup.css'%}">
+  </head>
+  <body>{{form.non_field_errors.as_text}}<br>
+{{form.username.errors.as_text}}<br>
+{{form.password1.errors.as_text}}<br>
+{{form.password2.errors.as_text}}<br>
+  <div><span>Sign Up for NoteKeeper</span><br><form action="" method="POST">
+    {% csrf_token %}  
+    Username<br>
+    {{form.username}}<br>
+    Password<br>
+    {{form.password1}}<br>
+    Confirm Password<br>
+    {{form.password2}}<br>
+    <input class="btn" type='submit' value='Sign Up'>
+  </form></div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{%extends "base_generic.html" %}
+{% block content %}
+<div class="main">
+{% ifequal taskshow.user request.user %}
+{{ taskshow.title }}
+{{ taskshow.content }}
+{% else %}
+You are not authorised to see this
+{% endifequal %}
+</div>
+{% endblock %}

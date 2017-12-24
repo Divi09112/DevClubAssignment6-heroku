@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block title %}<title>NoteKeeper</title>{% endblock %}
+    {% load static %}<link rel="stylesheet" type="text/css" href="{% static 'notes/notes.css'%}">
+    <script src="{% static 'notes/notes.js'%}"></script>
+  </head>
+  <body>
+    {% block sidebar %}
+    <div class="sidebar">
+      <span>All Todos</span>
+        {% for task in tasks %}
+        <hr><div class="list" ><a class='show' href="{{ task.get_absolute_url }}">{{ task.title }}</a></div>
+        {% endfor %}
+      
+      <hr>
+      <a href ="{% url 'logout' %}">Logout</a>
+    </div>
+    {% endblock %}
+    {% block content %}{% endblock %}
+  </body>
+</html>
