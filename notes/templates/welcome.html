@@ -2,13 +2,17 @@
 <html>
 <heaad>
 <title>NoteKeeper</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'notes/welcome.css' %}">
 </head>
-<body>
-<h1>Welcome to Note Keeper</h1>
-<span><form action ="{% url 'login' %}">
-<input type="submit" value="Login"></form></span>
-<span><form action="{% url 'signup'%}">
-<input type="submit" value="Sign Up">
-</form></span>
+<body><div>
+<span>Welcome to NoteKeeper</span><br><br>
+<p>New to NoteKeeper?</p>
+<form action ="{% url 'signup' %}">
+<input class="btn" type="submit" value="Sign Up"></form><br>
+<p>Already a member?<p>
+<form action="{% url 'login'%}">
+<input class="btn" type="submit" value="Login">
+</form></div>
 </body>
 </html>
