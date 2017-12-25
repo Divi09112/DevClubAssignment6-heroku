@@ -1,12 +1,17 @@
 .sidebar{
+  margin-top:43px;
   width: 240px;
   height: 100%;
-  background-color:#ffc100;
+  background-color:#405696;
   position: fixed;
-  height:100%;
   z-index:1;
   top:0;
   left:0;
+}
+
+.sidebar span{
+color:white;
+margin-bottom:20px;
 }
 
 span{
@@ -15,7 +20,7 @@ margin-bottom:15px;
 font-size:25px;
 }
 
-hr{
+div hr{
 margin:0px;
 height:2px;
 background-color:#ff9900;
@@ -28,10 +33,12 @@ left:-8px;
 .list{
 line-height:30px;
 padding-left:20px;
+color:white;
 }
 
 .list:hover{
 background-color:#ff9900;
+cursor:pointer;
 }
 
 .show{
@@ -39,7 +46,11 @@ color:white;
 }
 
 .main{
-  margin-left:270px;
+margin:0px;
+background-color:#405696;
+margin-left:240px;
+padding:0px;
+margin-top:40px;
 }
 
 body{
@@ -50,4 +61,57 @@ font-family:Verdana;
 
 a{
 text-decoration:none;
+}
+
+#nav1{
+background-color:#405696;
+height:35px;
+width:100%;
+position:fixed;
+top:0;
+z-index:1;
+margin:0px;
+border:0px;
+}
+
+#nav{
+position:fixed;
+top:35px;
+width:100%;
+background-color:white;
+height:4px;
+border:0px;
+margin:0px;
+}
+
+#nav2{
+width:100%;
+position:fixed;
+top:39px;
+background-color:#405696;
+height:4px;
+margin:0px;
+border:0px;
+}
+
+.container{
+padding-left:10px;
+border:0px;
+border-top-left-radius:5px;
+background-color:#f8f8f8;
+margin:0px;
+}
+
+.heading{
+font-size:35px;
+font-weight:bold;
+}
+
+.logout{
+margin-left:8px;
+color:white;
+}
+
+.logout a{
+color:red;
 }
