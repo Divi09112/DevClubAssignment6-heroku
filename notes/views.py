@@ -20,9 +20,9 @@ def welcome(request):
     return render(
         request,'welcome.html'
 )
-
+@login_required(login_url='/notes/login/')
 def create_todo(request):
-    tasks=todo.objects.all()
+    tasks=todo.objects.filter(user=request.user)
     if request.method=='POST':
         form = ToDoCreate(request.POST)
         title = request.POST.get('title')

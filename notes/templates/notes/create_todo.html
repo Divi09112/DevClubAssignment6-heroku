@@ -2,14 +2,13 @@
 {% block content %}
 
 <div class="main">    
-  <div class="heading">
-    <span>Your ToDos</span><br /><br /><form action="" method="POST">
+  <div class="heading"><div class="note">
+    <span>New ToDo</span><br /><form action="" method="POST">
     {% csrf_token %}
-    <table>
-      {{ form }}
-    </table>
-    <input type="submit">
-  </div>
+    {{ form.title}}
+    {{form.content}}<br>  
+    <input type="submit" value ="Create" class="btn">
+  </div></div>
 </div>
 
 {% endblock %}

@@ -5,8 +5,8 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
 class ToDoCreate(forms.Form):
-    title = forms.CharField(required=True,label='' ,widget=forms.TextInput(attrs={'id':'entry'}))
-    content = forms.CharField(required=True, label='', widget=forms.Textarea(attrs={'id':'content','style':'resize:none'}))
+    title = forms.CharField(required=True,label='' ,widget=forms.TextInput(attrs={'id':'entry','placeholder':'Enter a title for your ToDo'}))
+    content = forms.CharField(required=True, label='', widget=forms.Textarea(attrs={'id':'content','style':'resize:none','placeholder':"Enter content for your ToDo"}))
 
 class SignUp(UserCreationForm):
     username=forms.CharField(required=True,label='Username',)
